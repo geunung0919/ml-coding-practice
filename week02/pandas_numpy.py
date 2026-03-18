@@ -192,7 +192,11 @@ print(np_a+10 /3)
 
 np_b = np.array([[1,0], [0,1]])
 print(np_b)
-print(np+a + np_b)
+print(np_a + np_b)
+print(np_a - np_b)
 print(np_a * np_b)
 print(np_a @ np_b)
-_
+
+print(np.random.randint(11))
+print(np.random.randint(50, 71))
+print(np.random.randin(50,71, 10))
