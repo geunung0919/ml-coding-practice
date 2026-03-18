@@ -9,5 +9,5 @@ print(sample.tail())
 sample.info()
 sample.describe()
 
-smaple_dic = {'name' : ['john','Ann', 'Kevin'], 'age':[23,22,21]}
-a = pd.DataFreame(sample_dic)
+sample_dic = {'name' : ['john','Ann', 'Kevin'], 'age':[23,22,21]}
+a = pd.DataFrame(sample_dic)
