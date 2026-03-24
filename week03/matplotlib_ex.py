@@ -280,4 +280,22 @@ plt.close()
 titanic = pd.read_csv('3.1.1.titanic.csv')
 
 #각 부모와 자녀의 수에 따른 생존자와 사망자 수 계산
-parch_counts = 
+parch_counts = titanic.groupby('Parch')['Survived'].value_counts().unstack().fillna(0)
+print(parch_counts)
+
+# x,y 설정
+x = parch_counts.index.astype(str)  #데이터프레임의 인덱스를 문자열로 변환
+y1 = parch_counts[0].values #사망자
+y2 = parch_counts[1].values #생존자
+
+plt.figure(figsize=(10,10))
+
+#plt.subplot() 함수를 사용하여 하나의 그림인 figure에 개별 서브플롯을 하나씩 추가
+#첫 버너째 서브플롯 설정(선 그래프)
+plt.subplot(2,1,1)
+#선 그래프 그리기
+plt.plot(x,y1, '-o', color = 'indigo', markersize = 7, linewidth = 3, alpha = 0.7,
+         label = 'Not Survived')
+plt.xlabel('Parch')
+plt.ylabel('Not Survived Count', color='indigo')
+plt.tick_params(axis = 'y', labelcolor = 'indigo')
