@@ -98,3 +98,5 @@ plt.legend(handles=scatter.legend_elements()[0], title = 'Survived',
            labels = ['Not Surevived', 'Survived'], loc='upper right')
 plt.savefig('Figure04.png')
 plt.close()
+
+""""""
