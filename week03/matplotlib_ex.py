@@ -310,3 +310,26 @@ plt.tick_params(axix = 'y', lavelcolor = 'deeppink')
 plt.legend(loc='upper right')
 
 #제목 설정
+plt.suptitle('Survival Analysis by Number of Parents / Children (Parch) on the Titanic')
+plt.tight_layout()
+plt.savefig('Figure13.png')
+plt.close()
+
+## **개별 서브플롯을 동시에 생성하기 **
+
+# 2*2 구성이 figure 
+fig, axes = plt.subplots(2,2)
+
+#선그래프
+axes[0,0].plot([1,2,3])
+axes[0,1].plot([4,5,6])
+axes[1,0].plot([7,8,9])
+axes[1,1].plot([10,11,12])
+plt.savefig('Figure14.png')
+plt.close()
+
+## **타이타닉 데이터셋으로 개별 서브플롯 동시에 그리기 **
+
+# 각 부모와 자녀의 수에 따른 생존자와 사망자 수 계산
+parch_counts = titanic.groupby('Parch')['Survived'].value_counts().unstack().fillna(0)
+print(parch_counts)
