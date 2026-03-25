@@ -409,4 +409,3 @@ plt.grid(axis = 'y',linestyle = '--', alpha = 0.7)
 
 #이미지로 저장
 plt.savefig('Figure17.png')
-print("이미지파일 생성 확인용")
