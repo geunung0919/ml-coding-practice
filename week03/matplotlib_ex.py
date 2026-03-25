@@ -306,7 +306,7 @@ plt.subplot(2,1,2)
 plt.bar(x, y2, color='deeppink', alpha = 0.7, width = 0.5, label = 'Survived')
 plt.xlabel('Parch')
 plt.ylabel('Survived Count', color = 'deeppink')
-plt.tick_params(axix = 'y', labelcolor = 'deeppink')
+plt.tick_params(axis = 'y', labelcolor = 'deeppink')
 plt.legend(loc='upper right')
 
 #제목 설정
@@ -346,7 +346,7 @@ fig, axes = plt.subplots(2,1, figsize=(10,10))
 axes[0].plot(x,y1,'-o', color = 'indigo', markersize = 7, linewidth = 3, alpha = 0.7, label = 'Not Survived')
 axes[0].set_xlabel('Parch')
 axes[0].set_ylabel('Not Surevived Count', color='indigo')
-axes[0].tick_params(axis='y', lavelcolor='indigo')
+axes[0].tick_params(axis='y', labelcolor='indigo')
 axes[0].legend(loc='upper right')
 
 #두 번째 서브플롯 설정(막대 그래프)
