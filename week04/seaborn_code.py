@@ -37,4 +37,15 @@ ax2 = fig.add_subplot(1,2,2)
 
 #식사가 이루어진 시간대 파악
 #x축 변수, 데이터셋, axe 객체(1번째 그래프)
-sns.countplot(x= 'time',)
+sns.countplot(x= 'time', data = tips, ax = ax1)
+
+#식사가 이루어진 시간대 파악과 식사가 이루어진 요일로 색상 분류
+# x축 변수, hue로 색상 분류, 데이터 셋, 색상 설정, axe 객체 (2번째 그래프)
+sns.countplot(x = 'time', hue = 'day', data = tips, palette='Set2', ax=ax2)
+
+ax1.set_title('Frequency of Tips by time')
+ax2.set_title('Frequency of Tips by Time and Day')
+plt.savefig('./week04/Seaborn_Figure02.jpg')
+
+# **선행 회귀선 있는 산점도**
+#figure에 2개의 서브 플롯을 생성
