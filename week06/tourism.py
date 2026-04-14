@@ -54,3 +54,8 @@ def main():
                 result.append([natName, nat_cd, yyyymm, num])
 
     return (jsonResult, result, natName, ed)
+
+"""### [CODE 2]"""
+
+def getTourismStatsItem(yyyymm, nat_cd, ed_cd):
+    service_url = ""
