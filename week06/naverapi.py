@@ -14,4 +14,4 @@ def main():
     cnt = 0
     jsonResult = []
 
-    jsonRespones = getNaverSearch(node, srcText, 1, 100)
+    jsonRespones = getNaverSearch(node, srcText, 1, 100)        #[]
