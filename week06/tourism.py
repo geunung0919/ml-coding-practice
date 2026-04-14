@@ -24,8 +24,7 @@ def main():
     columns = ["입국자국가", "국가코드", "입국연월", "입국자 수"]
     result_df = pd.DataFrame(result, columns= columns)
     result_df.to_csv('./%s_%s_%d_%s.csv' %(natName, ed_cd, nStartYear, dataEND), index = False, encoding = 'cp949')
-
-    """### [CODE 3]"""
+ """### [CODE 3]"""
 
     def getTourismStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
         jsonResult = []
@@ -54,7 +53,7 @@ def main():
                 result.append([natName, nat_cd, yyyymm, num])
 
     return (jsonResult, result, natName, ed)
-
+   
 """### [CODE 2]"""
 
 def getTourismStatsItem(yyyymm, nat_cd, ed_cd):
