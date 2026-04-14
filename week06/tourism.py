@@ -38,9 +38,9 @@ def main():
                 if (jsonData['response']['header']['resultMsg'] == 'OK'):
                     #데이터가 없는 마지막 항목일 경우 ---------------------------------------------
                     if jsonData['response']['body']['items'] == '':
-                    dataEND = "{0}{1:0>2}".format(str(year), str(month -1))
-                    print("데이터 없음. . . . \n제공되는 통계 데이터는 %s년 %s월까지 입니다." % (str(year), str(month-1)))
-                    break
+                       dataEND = "{0}{1:0>2}".format(str(year), str(month -1))
+                       print("데이터 없음. . . . \n제공되는 통계 데이터는 %s년 %s월까지 입니다." % (str(year), str(month-1)))
+                       break
                 #jsonData를 출력하여 확인 . . . . . . . . . . . . . . . . . . . . . . . . .
                 print(json.dumps(jsonData, indent= 4, sort_keys= True, ensure_ascii=False))
 
