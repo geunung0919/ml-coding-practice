@@ -36,4 +36,7 @@ def main():
                 yyyymm = "{0}{1:0>2}".format(str(year), str(month))
                 jsonData = getTourismStatsService(yyyymm, nat_cd, ed_cd)        #[CODE 2]
                 if (jsonData['response']['header']['resultMsg'] == 'OK'):
-                    dataEND = "{0}{1:0>2}".format(str(year), )
+                    dataEND = "{0}{1:0>2}".format(str(year), str(month -1))
+                    print("데이터 없음. . . . \n제공되는 통계 데이터는 %s년 %s월까지 입니다." % (str(year), str(month-1)))
+                    break
+                #jsonData를 출력하여 확인 . . . . . . . . . . . . . . . . . .
