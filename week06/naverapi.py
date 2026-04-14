@@ -25,4 +25,6 @@ def main():
             start = jsonRespones['start'] + jsonRespones['display']
             jsonRespones = getNaverSearch(node, srcText, start, 100)  # [CODE 2]
 
+            print('전체 검색 : %d 건 ' %total)
+
             
