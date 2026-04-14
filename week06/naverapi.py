@@ -90,4 +90,3 @@ def getPostData(post, jsonResult, cnt):   #[CODE 3]
     })
     return
 
-print("확인용")
