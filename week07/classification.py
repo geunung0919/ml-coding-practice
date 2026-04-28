@@ -13,5 +13,18 @@ print(y.shape)
 
 import matplotlib.pyplot as plt
 
-def plot_digit(image_data_):
+def plot_digit(image_data):
+    image = image_data.reshape(28, 28)
+    plt.imshow(image, cmap = "binary")
+    plt.axis("off")
+
+some_digit = X[0]
+plot_digit(some_digit)
+plt.show()
+
+print(y[0])         # 샘플 데이터 레이블 확인 (=5)
+
+# 10 x 10 그림생성
+plt.figure(figsize=(9,9))
+for idx, image_data in enumerate(x[:100]):
     
