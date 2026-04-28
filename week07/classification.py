@@ -5,4 +5,8 @@ mnist = fetch_openml('mnist_784', as_frame = False)
 
 print(mnist.keys())   #data와 target만 사용
 
-X,y = 
+X,y = mnist.data, mnist.target
+print(X)
+print(X.shape)
+print(y)
+print(y.shape)
