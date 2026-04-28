@@ -29,4 +29,6 @@ plt.figure(figsize=(9,9))
 for idx, image_data in enumerate(x[:100]):
     plt.subplot(10,10, idx+1)
     plot_digit(image_data)
-plt.subpl
+plt.subplots_adjust(wspace=0, haspace=0)
+plt.show()
+
