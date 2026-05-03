@@ -49,3 +49,5 @@ netflix.insa().sum()
 
 # 시청 등급 기준표를 참고하여 Netflix의 rating 변수를 이용한 age_group_dic 변수 생성
 # rating 컬럼의 값을 age_group 이라는 컬럼으로 복사
+netflix['age_group'] = netflix['rating']
+
