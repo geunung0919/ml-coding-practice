@@ -51,3 +51,14 @@ netflix.insa().sum()
 # rating 컬럼의 값을 age_group 이라는 컬럼으로 복사
 netflix['age_group'] = netflix['rating']
 
+# 시청 등급 코드를 더 이해하기 쉬운 표현으로 매핑할 딕셔너리 정의(key, Value 선언)
+age_group_dic = {
+    'G' : 'All',
+    'TV-G' : 'All',
+    'TV-Y' : 'All',
+    'PG' : 'Older Kids',
+    'TV-Y7' : 'Older Kids',
+    'TV-Y7-FV' : 'Older Kids',
+    'TV_PG' : 'Older Kids',
+    
+}
