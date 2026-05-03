@@ -205,4 +205,12 @@ text = str(list(netflix['description']))
 
 # mask : 단어를 그릴 위치 설정, 흰색(#FFFFFF) 항목은 마스킹된 것으로 간주
 # 로고 이미지 열고 넘파이 배열로 변환
-mask = np.array(Image.open('netflix_logo,jpg)'))
+mask = np.array(Image.open('netflix_logo.jpg'))
+
+# 워드 클라우드 색상맵 만들기
+cmap = plt.matplotlib.colors.LinearSegmentedColormap.from_list('', ['#221f1f','#b20710'])
+
+# 워드 클라우드 생성
+# WordCloud( ).generate(text) : 선언해준 text에서 wordcloud를 생성
+wordcloud = WordCloud(background_color= 'White', width = 1400, height = 1400,
+                      max_words = 170, mask = mask, colormap = cmap).generate(text)
