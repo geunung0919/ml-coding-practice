@@ -60,5 +60,18 @@ age_group_dic = {
     'TV-Y7' : 'Older Kids',
     'TV-Y7-FV' : 'Older Kids',
     'TV_PG' : 'Older Kids',
-    
+    'PG-13' : 'Teens',
+    'TV-14' : 'Young Audlts',
+    'NC-17' : 'Adults',
+    'NR' : 'Adults',
+    'UR' : 'Adults',
+    'R' : 'Adults',
+    'TV-MA' : 'Adults'
 }
+
+# map 함수를 이용하여 rating 컬럼의 값을 딕셔너리를 기반으로 변환하여 age_group 컬럼에 저장
+# .map( ) : 사전에 정의한 내용을 변수에 적용
+netflix['age_group'] = netflix['age_group'].map(age_group_dic)
+netflix.head(2)
+
+# 데이터 전처리 완료한 데이터셋 csv 
