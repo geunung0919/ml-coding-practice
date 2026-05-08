@@ -49,7 +49,7 @@ rbf_kernel_svm_clf.fit(X,y)
 
 # SVM 회귀
 
-from sklearn.svm import LinearSVC
+from sklearn.svm import LinearSVR
 
 # 이 세 줄은 간단한 선형 데이터셋을 생성합니다.
 np.random.seed(42)
@@ -70,4 +70,3 @@ y = 0.2 + 0.1 * X[:, 0] + 0.5 * X[:, 0] ** 2 + np.random.randn(50) / 10
 svm_poly_reg = make_pipeline(StandardScaler(),
                              SVR(kernel="poly", degree=2, C=0.01, epsilon=0.1))
 svm_poly_reg.fit(X,y)
-print("코드 끝")
