@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # 세션 저장소에 업로드한 csv 파일을 읽어 변수에 할당
-netflix = pd.read_csv('dowload/netflix_titles.csv')
+netflix = pd.read_csv('netflix_titles.csv')
 netflix.head()
 
 # .columns : 열 이름 확인
@@ -181,7 +181,7 @@ netflix_age_country_unstack
 plt.figure(figsize=(15,5))
 
 # 사용자 정의 컬러맵 만들기
-cmap = plt.matplotlib.color.LinearSegmentedColormap.from_list('', ['#221f1f', '#b20710', '#f5f5f1'])
+cmap = plt.matplotlib.colors.LinearSegmentedColormap.from_list('', ['#221f1f', '#b20710', '#f5f5f1'])
 
 sns.heatmap(netflix_age_country_unstack, cmap = cmap, linewidth=2.5, annot=True, fmt='.0%')
 
