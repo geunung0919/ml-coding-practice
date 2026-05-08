@@ -23,3 +23,9 @@ plt.axis([0, 2, 0, 15])
 plt.grid()
 plt.show()
 
+from sklearn.linear_model import LinearRegression
+
+lin_reg = LinearRegression()
+lin_reg.fit(X,y)
+lin_reg.intercpet_, lin_reg.coef_
+
