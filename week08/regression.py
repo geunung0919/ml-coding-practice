@@ -30,4 +30,15 @@ lin_reg = LinearRegression()
 lin_reg.fit(X,y)
 lin_reg.intercpet_, lin_reg.coef_
 
+X_new = np.array([[0], [2]])
+print(lin_reg.predict(X_new))
 
+#확률적 경사 하강법
+
+from sklearn.linear_model import SGDClassifier
+
+sgd_reg = SGDClassifier(max_iter=1000, tol=1e-5, penalty=None, eta0=0.01,
+                        n_iter_no_change=100, random_state=42)
+sgd_reg.fit(X, y.ravel())   # fit() 이 1D 타깃을 기대하기 때문에 y.ravel()로 씁니다
+
+sgd_reg.fit
