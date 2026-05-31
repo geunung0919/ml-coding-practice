@@ -62,6 +62,6 @@ plt.axis([1, 8.5, 0, 3500])
 plt.grid()
 plt.show()
 
-from sklearn.metrics import shilhouette_score
+from sklearn.metrics import silhouette_score
 
 print(shil)
