@@ -110,3 +110,5 @@ for k in (3,4,5,6):
         plt.xlabel("실루엣 계수")
     else:
         plt.tick_params(labelbottom = False)
+
+    plt.axvline(x=silhouette_score)
