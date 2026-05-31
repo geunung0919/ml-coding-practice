@@ -64,4 +64,4 @@ plt.show()
 
 from sklearn.metrics import silhouette_score
 
-print(shil)
+print(silhouette_score)
