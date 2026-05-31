@@ -66,4 +66,4 @@ from sklearn.metrics import silhouette_score
 
 print(silhouette_score(X, kmeans.labels_))
 
-silhouette_score = [silhouette_score(X, model.labels)
+silhouette_score = [silhouette_score(X, model.labels_) 
