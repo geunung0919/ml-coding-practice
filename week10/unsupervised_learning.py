@@ -49,3 +49,4 @@ print(kmeans.inertia_)
 
 print(kmeans.score(X))
 
+kmeans_per_k = [KMeans]
